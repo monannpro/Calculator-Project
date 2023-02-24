@@ -1,0 +1,79 @@
+*, ::before, ::after {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.calculator {
+    height:60vh;
+    min-width:370px;
+    max-width:370px;
+    background-color: #404545;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0 15px black;
+}
+
+.screen {
+    width: 100%;
+    min-height: 20%;
+    max-height: min-content;
+    background-color: #D4D9DB;
+    color: black;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 5px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 7px 3px #959f9f inset;
+}
+
+.currNum {
+    font-size:50px;
+}
+
+.prevNum {
+    font-size: 35px;
+}
+
+.mathSign {
+    font-size: 20px;
+}
+
+.panel {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.panel button {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: ghostwhite;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 5px lightgray;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    font-size: 45px;
+}
+
+button.result {
+    background-color: orange;
+    box-shadow: 1px 5px darkorange;
+}
