@@ -12,9 +12,9 @@ let result = 0;
 function displayNumbers () {
 
     resultNumber.classList.add("hidden");
-
-    if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
-    if(this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.'
+    if(mathSign.innerHTML === '') resultNumber.innerHTML = '';
+    if(this.textContent === '.' && (currentNumber.innerHTML.includes('.') || resultNumber.innerHTML.includes('.'))) return;
+    if(this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.';
 
     currentNumber.innerHTML += this.textContent;
 }
@@ -24,12 +24,12 @@ function operate () {
     if(currentNumber.innerHTML === '' && resultNumber.innerHTML === '' && this.textContent === '-') {
         currentNumber.innerHTML = '-';
         return;
+    } else if(resultNumber.innerHTML === '' && currentNumber.innerHTML === ''){
+        return;
     } else if(resultNumber.innerHTML !== ''){
         resultNumber.classList.add("hidden");
         currentNumber.innerHTML = result;
-    } else if(currentNumber.innerHTML === ''){
-    return;
-    } if(mathSign.innerHTML !== '') {
+    }  if(mathSign.innerHTML !== '') {
        showResult();
         currentNumber.innerHTML = result;
     }
