@@ -36,10 +36,11 @@ body {
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 7px 3px #959f9f inset;
+    overflow: hidden
 }
 
 .currNum {
-    font-size:50px;
+    font-size:35px;
 }
 
 .prevNum {
@@ -73,7 +74,15 @@ button:hover {
     font-size: 45px;
 }
 
-button.result {
+button.equals {
     background-color: orange;
     box-shadow: 1px 5px darkorange;
+}
+
+#result{
+    font-size: 50px;
+}
+
+#result.hidden{
+    display:none;
 }
